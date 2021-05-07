@@ -47,14 +47,16 @@ jobs:
         name: code_check_report
         path: codecheck.txt
 
-  PIO:
+  build:
     strategy:
       fail-fast: false
       matrix:
         example:
-          - "blink"
-
+          - "native-blink"
+          - "stc-blink"
+          - "stc-header"
         os: [ubuntu-latest, windows-latest, macos-latest]
+
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
@@ -77,4 +79,3 @@ jobs:
         working-directory: examples
         run: |
           pio run -d ${{ matrix.example }}
-
