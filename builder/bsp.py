@@ -10,21 +10,26 @@ platform = env.PioPlatform()
 board_config = env.BoardConfig()
 
 FRAMEWORK_DIR = platform.get_package_dir("E15")
-assert isdir(FRAMEWORK_DIR)
+assert FRAMEWORK_DIR and isdir(FRAMEWORK_DIR)
 
 
 env.Append(
-    CFLAGS=["--opt-code-size"],
     CPPPATH=[
         join(FRAMEWORK_DIR, "bsp"),
         join(FRAMEWORK_DIR, "lib"),
-        "$PROJECTSRC_DIR",
+    ],
+    LIBS=[
+        "c"
     ]
 )
 
+libs = [
+    env.BuildLibrary(
+        join("$BUILD_DIR", "BSP"),
+        join(FRAMEWORK_DIR, "bsp")),
+    env.BuildLibrary(
+        join("$BUILD_DIR", "LIB"),
+        join(FRAMEWORK_DIR, "lib")),
+]
 
-env.BuildSources(
-    join("$BUILD_DIR", "BSP"),
-    join(FRAMEWORK_DIR, "bsp"),
-    join(FRAMEWORK_DIR, "lib")
-)
+env.Prepend(LIBS=libs)

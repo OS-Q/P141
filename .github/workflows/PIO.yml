@@ -52,9 +52,9 @@ jobs:
       fail-fast: false
       matrix:
         example:
-          - "native-blink"
-          - "native-uart"
-          - "bsp-pwm"
+          # - "native-blink"
+          # - "native-uart"
+          # - "bsp-pwm"
           - "bsp-spi"
         os: [ubuntu-latest, windows-latest, macos-latest]
 
