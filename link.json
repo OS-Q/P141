@@ -2,7 +2,7 @@
   "name": "P15",
   "title": "nuvoton 8051 MCU",
   "description": "The Intel MCS-51 (commonly termed 8051) is an internally Harvard architecture, complex instruction set computer (CISC) instruction set, single chip microcontroller (uC) series developed by Intel in 1980 for use in embedded systems.",
-  "homepage": "https://en.wikipedia.org/wiki/Intel_MCS-51",
+  "homepage": "https://www.nuvoton.com/products/microcontrollers/8bit-8051-mcus/",
   "license": "Apache-2.0",
   "keywords": [
       "dev-platform",
@@ -16,9 +16,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/platformio/platform-intel_mcs51.git"
+    "url": "https://github.com/OS-Q/P15.git"
   },
-  "version": "1.2.3",
+  "version": "1.0.0",
   "frameworks": {
     "bsp": {
       "package": "E15",
