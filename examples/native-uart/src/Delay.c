@@ -2,7 +2,7 @@
 #include "Common.h"
 #include "Delay.h"
 #include "SFR_Macro.h"
-#include "Function_define.h"
+#include "Function_Define.h"
 
 void Timer0_Delay100us(uint32_t count)
 {
@@ -62,7 +62,7 @@ void Timer1_Delay10ms(uint32_t count)
 
 void Timer2_Delay500us(uint32_t count)
 {
-	clr_T2DIV2;				//Timer2 Clock = Fsys/4 
+	clr_T2DIV2;				//Timer2 Clock = Fsys/4
 	clr_T2DIV1;
 	set_T2DIV0;
 	set_TR2;				//Start Timer2

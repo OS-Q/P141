@@ -1,7 +1,7 @@
 #include "N76E003.h"
 #include "Common.h"
 #include "SFR_Macro.h"
-#include "Function_define.h"
+#include "Function_Define.h"
 
 bit_t BIT_TMP;
 
@@ -16,7 +16,7 @@ void InitialUART0_Timer1(uint32_t baudrate) //T1M = 1, SMOD = 1
 	set_SMOD;				//UART0 Double Rate Enable
 	set_T1M;
 	clr_BRCK;				//Serial port 0 baud rate clock source = Timer1
- 
+
 #if defined(FOSC_160000)	//16 MHz
 	TH1 = 256 - (1000000/baudrate+1);
 #elif defined(FOSC_166000)	//16.6 MHz
@@ -30,7 +30,7 @@ void InitialUART0_Timer1(uint32_t baudrate) //T1M = 1, SMOD = 1
 void InitialUART0_Timer3(uint32_t baudrate) //use timer3 as Baudrate generator
 {
 	P06_Quasi_Mode;			//Setting UART pin as Quasi mode for transmit
-	P07_Quasi_Mode;			//Setting UART pin as Quasi mode for transmit	
+	P07_Quasi_Mode;			//Setting UART pin as Quasi mode for transmit
 
 	SCON = 0x50;			//UART0 Mode1,REN=1,TI=1
 	set_SMOD;				//UART0 Double Rate Enable

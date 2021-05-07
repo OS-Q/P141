@@ -1,6 +1,6 @@
 #include "N76E003.h"
 #include "SFR_Macro.h"
-#include "Function_define.h"
+#include "Function_Define.h"
 #include "Common.h"
 #include "Delay.h"
 
