@@ -19,11 +19,25 @@
     "url": "https://github.com/platformio/platform-intel_mcs51.git"
   },
   "version": "1.2.3",
+  "frameworks": {
+    "bsp": {
+      "package": "E15",
+      "script": "builder/bsp.py"
+    }
+  },
   "packages": {
     "toolchain-sdcc": {
       "type": "toolchain",
       "owner": "platformio",
-      "version": "~1.30804.10766"
+      "version": "~1.40100.0",
+      "optionalVersions": [
+        "~1.30901.0"
+      ]
+    },
+    "E15": {
+      "type": "framework",
+      "optional": true,
+      "version": "https://github.com/OS-Q/E15.git"
     },
     "tool-stcgal": {
       "type": "uploader",

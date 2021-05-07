@@ -55,6 +55,7 @@ jobs:
           - "native-blink"
           - "native-uart"
           - "bsp-pwm"
+          - "bsp-spi"
         os: [ubuntu-latest, windows-latest, macos-latest]
 
     runs-on: ${{ matrix.os }}
