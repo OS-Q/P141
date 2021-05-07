@@ -3,12 +3,12 @@ python:
   - "3.9"
 
 env:
-  - PLATFORMIO_PROJECT_DIR=examples/blink
+  - PLATFORMIO_PROJECT_DIR=examples/native-blink
 
 
 install:
   - pip install -U https://github.com/platformio/platformio/archive/develop.zip
-  - platformio platform install file://.
+  - platformio platform install https://github.com/OS-Q/P15/archive/pio.zip
 
 script:
   - platformio run -d $PLATFORMIO_PROJECT_DIR

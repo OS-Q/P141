@@ -14,13 +14,12 @@ jobs:
             git submodule update --init --recursive
             python -m pip install --upgrade pip
             pip install platformio
-            pio platform install https://github.com/OS-Q/P14/archive/pio.zip
+            pio platform install https://github.com/OS-Q/P15/archive/pio.zip
       - run:
           name: "Build"
           command: |
             pio run -d examples/native-blink
-            pio run -d examples/stc-blink
-            pio run -d examples/stc-header
+
 
   PIO:
     docker:
@@ -35,13 +34,12 @@ jobs:
             git submodule update --init --recursive
             python -m pip install --upgrade pip
             pip install -U https://github.com/platformio/platformio/archive/develop.zip
-            pio platform install https://github.com/OS-Q/P14/archive/pio.zip
+            pio platform install https://github.com/OS-Q/P15/archive/pio.zip
       - run:
           name: "Build"
           command: |
             pio run -d examples/native-blink
-            pio run -d examples/stc-blink
-            pio run -d examples/stc-header
+
 
 workflows:
     version: 2

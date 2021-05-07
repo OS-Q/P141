@@ -53,8 +53,7 @@ jobs:
       matrix:
         example:
           - "native-blink"
-          - "stc-blink"
-          - "stc-header"
+
         os: [ubuntu-latest, windows-latest, macos-latest]
 
     runs-on: ${{ matrix.os }}
