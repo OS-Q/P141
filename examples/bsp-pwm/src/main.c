@@ -6,8 +6,8 @@
 #include <uart.h>
 #include <terminal.h>
 
-
 #include "main.h"
+
 
 /*
   * N76E0003 dev board pinout:
