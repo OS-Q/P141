@@ -8,7 +8,7 @@ env:
 
 install:
   - pip install -U https://github.com/platformio/platformio/archive/develop.zip
-  - platformio platform install https://github.com/OS-Q/P15/archive/pio.zip
+  - platformio platform install file://.
 
 script:
   - platformio run -d $PLATFORMIO_PROJECT_DIR

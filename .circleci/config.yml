@@ -13,13 +13,14 @@ jobs:
             apt install -y git
             git submodule update --init --recursive
             python -m pip install --upgrade pip
-            pip install platformio
-            pio platform install https://github.com/OS-Q/P15/archive/pio.zip
+            pip install -U https://github.com/OS-Q/M03/releases/latest/download/qio.zip
+            pio platform install file://.
       - run:
           name: "Build"
           command: |
             pio run -d examples/native-blink
-
+            pio run -d examples/bsp-pwm
+            pio run -d examples/bsp-spi
 
   PIO:
     docker:
@@ -34,11 +35,13 @@ jobs:
             git submodule update --init --recursive
             python -m pip install --upgrade pip
             pip install -U https://github.com/platformio/platformio/archive/develop.zip
-            pio platform install https://github.com/OS-Q/P15/archive/pio.zip
+            pio platform install file://.
       - run:
           name: "Build"
           command: |
             pio run -d examples/native-blink
+            pio run -d examples/bsp-pwm
+            pio run -d examples/bsp-spi
 
 
 workflows:

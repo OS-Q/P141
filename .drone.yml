@@ -8,9 +8,11 @@ steps:
   - apt update
   - apt install -y git
   - git submodule update --init --recursive
-  - pip install platformio
-  - qio platform install https://github.com/OS-Q/P15/archive/pio.zip
+  - pip install -U https://github.com/OS-Q/M03/releases/latest/download/qio.zip
+  - qio platform install file://.
   - qio run -d examples/native-blink
+  - pio run -d examples/bsp-spi
+  - pio run -d examples/bsp-pwm
 
 - name: PIO
   image: python:3
@@ -19,5 +21,7 @@ steps:
   - apt install -y git
   - git submodule update --init --recursive
   - pip install -U https://github.com/platformio/platformio/archive/develop.zip
-  - pio platform install https://github.com/OS-Q/P15/archive/pio.zip
+  - pio platform install file://.
   - pio run -d examples/native-blink
+  - pio run -d examples/bsp-spi
+  - pio run -d examples/bsp-pwm
