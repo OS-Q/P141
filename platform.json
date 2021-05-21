@@ -1,8 +1,8 @@
 {
   "name": "P122",
   "title": "nuvoton 8051 MCU",
-  "description": "The Intel MCS-51 (commonly termed 8051) is an internally Harvard architecture, complex instruction set computer (CISC) instruction set, single chip microcontroller (uC) series developed by Intel in 1980 for use in embedded systems.",
-  "homepage": "https://en.wikipedia.org/wiki/Intel_MCS-51",
+  "description": "nuvoton 8051 MCU.",
+  "homepage": "https://www.nuvoton.com/products/microcontrollers/8bit-8051-mcus/",
   "keywords": [
       "OS-Q",
       "dev-platform",
@@ -22,17 +22,14 @@
   "frameworks": {
     "bsp": {
       "package": "E122",
-      "script": "builder/bsp.py"
+      "script": "builder/frameworks/bsp.py"
     }
   },
   "packages": {
     "toolchain-sdcc": {
       "type": "toolchain",
       "owner": "platformio",
-      "version": "~1.40100.0",
-      "optionalVersions": [
-        "~1.30901.0"
-      ]
+      "version": "~1.40100.0"
     },
     "E122": {
       "type": "framework",
