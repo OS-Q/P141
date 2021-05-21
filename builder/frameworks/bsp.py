@@ -9,7 +9,7 @@ env = DefaultEnvironment()
 platform = env.PioPlatform()
 board_config = env.BoardConfig()
 
-FRAMEWORK_DIR = platform.get_package_dir("E15")
+FRAMEWORK_DIR = platform.get_package_dir("E122")
 assert FRAMEWORK_DIR and isdir(FRAMEWORK_DIR)
 
 
