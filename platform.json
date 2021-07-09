@@ -1,6 +1,6 @@
 {
-  "name": "P122",
-  "title": "nuvoton 8051 MCU",
+  "name": "P141",
+  "title": "OS-Q nuvoton 8051",
   "description": "nuvoton 8051 MCU.",
   "homepage": "https://www.nuvoton.com/products/microcontrollers/8bit-8051-mcus/",
   "keywords": [
@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/OS-Q/P122.git"
+    "url": "https://github.com/OS-Q/P141.git"
   },
   "version": "1.0.0",
   "frameworks": {
     "bsp": {
-      "package": "E122",
+      "package": "F142",
       "script": "builder/frameworks/bsp.py"
     }
   },
@@ -31,10 +31,10 @@
       "owner": "platformio",
       "version": "~1.40100.0"
     },
-    "E122": {
+    "F142": {
       "type": "framework",
       "optional": true,
-      "version": "https://github.com/OS-Q/E122.git"
+      "version": "https://github.com/OS-Q/F142.git"
     },
     "tool-stcgal": {
       "type": "uploader",
